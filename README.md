@@ -1,4 +1,4 @@
-# bilbili-
+# bilbili直播间弹幕净化器（自动举报弹幕脚本）
 
 cookie获取方式  https://www.cnblogs.com/wdysblog/p/16615453.html
 
