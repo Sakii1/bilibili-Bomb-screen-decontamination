@@ -1,4 +1,4 @@
-module BilibiliSuitRushBuy
+module bilibili-Bomb-screen-decontamination
 
 go 1.17
 
