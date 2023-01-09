@@ -17,7 +17,7 @@ var room int64 = 24326168 //输入房间号  这也找不到建议速速remake
 
 //cookie1=  后面请直接放内容  不要放入cookie:  直接从 buvid3= 或 _uuid=开始复制完成就行
 //csrf1=  后面请直接放内容  在cookie的bili_jct里面  不要放入 bili_jct=
-//如果一个 举办成功 都没看到  那应该是数据放错了
+//如果第一条的返回结果不是 举办成功  那应该是数据放错了  
 
 var cookie1 string = "" //
 
