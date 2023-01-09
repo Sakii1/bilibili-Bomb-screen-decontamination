@@ -24,11 +24,12 @@ var csrf string = "" //     cookie里的bili_jct
 func main() {
 
 	danmu()
-	zbj()
+	
 
 }
 
 func danmu() {
+	zbj()
 	for {
 		time.Sleep(time.Second * 5) //几秒一次？  底边调10也行 反正没弹幕   弹幕很快的就调0吧
 		client := &http.Client{}
