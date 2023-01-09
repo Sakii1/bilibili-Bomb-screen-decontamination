@@ -19,6 +19,8 @@ var room int64 = 24326168 //输入房间号  这也找不到建议速速remake
 //csrf1=  后面请直接放内容  在cookie的bili_jct里面  不要放入 bili_jct=
 //如果第一条的返回结果不是 举办成功  那应该是数据放错了  
 
+//建议用小号挂着
+
 var cookie1 string = "" //
 
 var csrf string = "" //     cookie里的bili_jct
