@@ -8,13 +8,15 @@ import (
 	"net/http"
 	"net/url"
 	"strings"
+	"sync"
 	"time"
 )
 
-var room int64 = 21195828 //输入房间号  这也找不到建议速速remake
+var wggg sync.WaitGroup
+var room int64 = 24326168 //输入房间号  这也找不到建议速速remake
 
-//cookie1=  后面请直接放内容  不要放入cookie:  直接从 buvid3= 或 _uuid=开始复制完全就行
-//csrf1=  后面请直接放内容  在cookie数据里面的bili_jct后面  不要放入 bili_jct=
+//cookie1=  后面请直接放内容  不要放入cookie:  直接从 buvid3= 或 _uuid=开始复制完成就行
+//csrf1=  后面请直接放内容  在cookie的bili_jct里面  不要放入 bili_jct=
 //如果一个 举办成功 都没看到  那应该是数据放错了
 
 var cookie1 string = "" //
@@ -22,18 +24,14 @@ var cookie1 string = "" //
 var csrf string = "" //     cookie里的bili_jct
 
 func main() {
-
-	danmu()
-	
-
+	wggg.Add(2)
+	go danmu()
+	go zbj()
+	wggg.Wait()
 }
 
 func danmu() {
-	
-	
-	zbj() //不想举报直播间的话就注释这行
-	
-	
+
 	for {
 		time.Sleep(time.Second * 5) //几秒一次？  底边调10也行 反正没弹幕   弹幕很快的就调0吧
 		client := &http.Client{}
