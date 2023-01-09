@@ -25,8 +25,11 @@ var csrf string = "" //     cookie里的bili_jct
 
 func main() {
 	wggg.Add(2)
-	go danmu()
-	go zbj()
+	
+	go danmu()   
+	
+	go zbj()  //如果不想举报直播间 注释这一行即可
+	
 	wggg.Wait()
 }
 
